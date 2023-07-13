@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1 (Python 3.11.4 on win32)" generated="20230706 16:31:14.507" rpa="false" schemaversion="4">
+<suite id="s1" name="TC2 Post Request" source="C:\Users\vpall\PythonAutomationRobotFramework\TestCases\TC2_Post_Request.robot">
+<test id="s1-t1" name="Put_CustomerRegistration" line="9">
+<kw name="Create Session" library="RequestsLibrary">
+<arg>myssion ${base_url}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<msg timestamp="20230706 16:31:14.595" level="FAIL">Keyword 'RequestsLibrary.Create Session' expected 2 to 14 arguments, got 1.</msg>
+<status status="FAIL" starttime="20230706 16:31:14.594" endtime="20230706 16:31:14.595"/>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<var>${body}</var>
+<arg>id=349074</arg>
+<arg>name=Vinaya Jain</arg>
+<arg>email=vinaya_jain@gusikowski.test</arg>
+<arg>gender=female status=active</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="NOT RUN" starttime="20230706 16:31:14.595" endtime="20230706 16:31:14.595"/>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<var>${header}</var>
+<arg>Content-Type=application/json</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="NOT RUN" starttime="20230706 16:31:14.595" endtime="20230706 16:31:14.595"/>
+</kw>
+<kw name="POST On Session" library="RequestsLibrary">
+<var>${response}</var>
+<arg>myssion</arg>
+<arg>/public/v2/users</arg>
+<arg>json=${body}</arg>
+<arg>headers=${header}</arg>
+<doc>Sends a POST request on a previously created HTTP Session.</doc>
+<status status="NOT RUN" starttime="20230706 16:31:14.595" endtime="20230706 16:31:14.595"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${response.status_code}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20230706 16:31:14.595" endtime="20230706 16:31:14.595"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${response.content}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20230706 16:31:14.595" endtime="20230706 16:31:14.595"/>
+</kw>
+<status status="FAIL" starttime="20230706 16:31:14.594" endtime="20230706 16:31:14.596">Keyword 'RequestsLibrary.Create Session' expected 2 to 14 arguments, got 1.</status>
+</test>
+<status status="FAIL" starttime="20230706 16:31:14.509" endtime="20230706 16:31:14.596"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="TC2 Post Request">TC2 Post Request</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
